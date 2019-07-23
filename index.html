@@ -75,7 +75,7 @@
 									Git Desktop
 								</h2>
 								<div class="header-button wow fadeInUp" data-wow-delay="0.3s">
-									<a href="#services" class="btn btn-common">Download</a>
+									<a id="download-link" href="" class="btn btn-common"></a>
 								</div>
 							</div>
 							<div
@@ -315,5 +315,18 @@ box-shadow: -5px -7px 23px -9px rgba(0,0,0,0.75);
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/form-validator.min.js"></script>
 		<script src="assets/js/contact-form-script.min.js"></script>
+		<script>
+			let dLink =  document.getElementById("download-link");
+			let os = navigator.platform;
+			if(os === "MacIntel"){
+				dLink.setAttribute("href", "https://google.com")
+				dLink.innerHTML = "Download for Mac";
+			}else if(os === "Linux x86_64"){
+				dLink.setAttribute("href", "https://youtube.com")
+				dLink.innerHTML = "Download for Linux";
+			}
+			
+		
+		</script>
 	</body>
 </html>
